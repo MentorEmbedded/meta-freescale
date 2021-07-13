@@ -1,8 +1,8 @@
-From 4330915d88dc4dd46eb4c28d756482b767c2747f Mon Sep 17 00:00:00 2001
-From: Alexander Kanavin <alex.kanavin@gmail.com>
-Date: Mon, 26 Oct 2015 17:30:14 +0200
-Subject: [PATCH 4/4] rtsp: drop incorrect reference to gstreamer-sdp in
- Makefile.am
+From 31f70e25d8c7ceeda7f6a14c3eb382c7c9cc05b1 Mon Sep 17 00:00:00 2001
+From: ansar-rasool <ansar_rasool@mentor.com>
+Date: Tue, 13 Jul 2021 13:41:53 +0500
+Subject: [PATCH] [PATCH 4/4] rtsp: drop incorrect reference to gstreamer-sdp
+ in  Makefile.am
 
 Upstream-Status: Pending [review on oe-core maillist]
 Signed-off-by: Alexander Kanavin <alex.kanavin@gmail.com>
@@ -11,17 +11,17 @@ Signed-off-by: Alexander Kanavin <alex.kanavin@gmail.com>
  1 file changed, 1 deletion(-)
 
 diff --git a/gst-libs/gst/rtsp/Makefile.am b/gst-libs/gst/rtsp/Makefile.am
-index 4f6d9f8..0afa370 100644
+index 13ac1b395..8b03125c7 100644
 --- a/gst-libs/gst/rtsp/Makefile.am
 +++ b/gst-libs/gst/rtsp/Makefile.am
-@@ -75,7 +75,6 @@ GstRtsp-@GST_API_VERSION@.gir: $(INTROSPECTION_SCANNER) libgstrtsp-@GST_API_VERS
- 		--libtool="$(LIBTOOL)" \
+@@ -82,7 +82,6 @@ GstRtsp-@GST_API_VERSION@.gir: $(INTROSPECTION_SCANNER) libgstrtsp-@GST_API_VERS
  		--pkg gio-2.0 \
  		--pkg gstreamer-@GST_API_VERSION@ \
+ 		--pkg gstreamer-base-@GST_API_VERSION@ \
 -		--pkg gstreamer-sdp-@GST_API_VERSION@ \
  		--pkg-export gstreamer-rtsp-@GST_API_VERSION@ \
  		--add-init-section="$(INTROSPECTION_INIT)" \
  		--output $@ \
 -- 
-2.6.2
+2.17.1
 
